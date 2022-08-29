@@ -1,0 +1,16 @@
+@use '../abstracts/functions'as func;
+@use '../abstracts/variables'as vars;
+
+#mapContainer {
+    padding-right: func.pxtorem(35);
+
+    .mapboxgl-interactive {
+        border-radius: vars.$border-radius;
+        height: func.pxtorem(200);
+
+    }
+
+    .mapboxgl-control-container {
+        display: none;
+    }
+}

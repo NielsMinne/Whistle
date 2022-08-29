@@ -1,0 +1,31 @@
+@use '../abstracts/functions' as func;
+
+.container-wrapper {
+    .my-events {
+
+        h5,
+        hr,
+        p {
+            max-width: func.pxtorem(384);
+            width: 80vw;
+            margin: 0 auto;
+        }
+
+        &__title {
+            padding-top: func.pxtorem(25);
+
+        }
+
+        p {
+            padding-top: func.pxtorem(10);
+        }
+
+        .invitation__button {
+            max-width: func.pxtorem(384);
+            width: 80vw;
+            margin: func.pxtorem(5) auto;
+
+        }
+    }
+}
+

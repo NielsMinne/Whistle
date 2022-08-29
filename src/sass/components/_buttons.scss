@@ -1,0 +1,176 @@
+@use 'sass:map';
+
+@use '../abstracts/functions'as func;
+@use '../abstracts/variables'as vars;
+
+.button {
+    &__normal {
+        width: 70vw;
+        max-width: func.pxtorem(336);
+        margin-right: func.pxtorem(20);
+        margin-bottom: func.pxtorem(25);
+        padding: func.pxtorem(10) func.pxtorem(30);
+        background-color: map.get($map:vars.$secondary-colors, $key: white);
+        border: none;
+        border-radius: vars.$border-radius;
+        box-shadow: vars.$box-shadow;
+        font-weight: 500;
+        color: map.get($map:vars.$secondary-colors, $key: black);
+
+        &:hover {
+            cursor: pointer
+        }
+
+        &--avatar {
+            @extend .button__normal;
+            margin-top: func.pxtorem(5);
+            padding: func.pxtorem(5)
+        }
+
+        &--friends {
+            @extend .button__normal;
+            margin-top: func.pxtorem(10);
+        }
+
+    }
+
+    &__invite {
+        @extend .button__normal;
+        background-color: map.get($map:vars.$colors, $key: color3);
+        color: map.get($map:vars.$colors, $key: color6);
+
+        &:hover {
+            background-color: map.get($map:vars.$colors, $key: color1);
+            color: map.get($map:vars.$colors, $key: color11);
+            cursor: pointer;
+            border: none;
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: default;
+
+            &:hover {
+                background-color: map.get($map:vars.$colors, $key: color3);
+                color: map.get($map:vars.$colors, $key: color6);
+            }
+        }
+
+        &--add {
+            @extend .button__invite;
+            max-width: func.pxtorem(192);
+            width: 40vw;
+            margin-left: 30vw;
+            margin-top: func.pxtorem(30);
+        }
+    }
+
+    &__warning {
+        @extend .button__invite;
+        background-color: map.get($map:vars.$colors, $key: color12);
+        color: map.get($map:vars.$colors, $key: color6);
+
+        &:hover {
+            background-color: map.get($map:vars.$secondary-colors, $key: hoverRed);
+            color: map.get($map:vars.$secondary-colors, $key: white);
+        }
+    }
+
+    &__panic {
+        @extend .button__invite;
+        padding: func.pxtorem(10) func.pxtorem(20);
+        background-color: map.get($map:vars.$colors, $key: color12);
+        border-radius: func.pxtorem(30);
+        color: map.get($map:vars.$colors, $key: color6);
+
+        &:hover {
+            @extend .button__panic;
+
+        }
+
+        &--active {
+            @extend .button__panic;
+            background-color: map.get($map:vars.$secondary-colors, $key: panicRed);
+            box-shadow: 0 3px 4px hsla(0, 0%, 100%, 0.37);
+
+            &:hover {
+                @extend .button__panic--active;
+            }
+        }
+    }
+
+    &__login {
+        @extend .button__normal;
+        max-width: 336px;
+        background: transparent;
+        border: 2px solid map.get($map:vars.$secondary-colors, $key: white);
+        color: map.get($map:vars.$secondary-colors, $key: white);
+        border-radius: func.pxtorem(30);
+        padding: func.pxtorem(10) func.pxtorem(70);
+
+        &:hover {
+            @extend .button__login;
+            background-color: map.get($map:vars.$colors, $key: color1);
+            ;
+            color: map.get($map:vars.$secondary-colors, $key: white);
+            border: 2px solid map.get($map:vars.$secondary-colors, $key:white);
+        }
+    }
+
+    &__link {
+        @extend .button__normal;
+        background: transparent;
+        color: map.get($map:vars.$secondary-colors, $key: white);
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        font-weight: 600;
+
+        &:hover {
+            @extend .button__link;
+            text-decoration: underline;
+        }
+    }
+
+    &__accept {
+        font-family: vars.$header-font;
+        background-color: map.get($map:vars.$colors, $key:color13);
+        color: map.get($map:vars.$secondary-colors, $key:white);
+        padding: func.pxtorem(10) func.pxtorem(10);
+        margin-bottom: func.pxtorem(40);
+        max-width: func.pxtorem(168);
+        width: 35vw;
+        font-weight: 600;
+    }
+
+    &__reject {
+        @extend .button__accept;
+        background-color: map.get($map:vars.$colors, $key:color14);
+    }
+
+    &__invitation {
+        background-color: white;
+        font-family: vars.$header-font;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: func.pxtorem(10);
+        padding: func.pxtorem(10);
+        border: none;
+        margin: func.pxtorem(10) 0;
+        box-shadow: 0 0px 5px rgba(34, 34, 34, 0.3);
+
+        p {
+            display: none;
+        }
+
+        i {
+            color: map.get($map:vars.$colors, $key:color1);
+            padding-left: func.pxtorem(10);
+        }
+    }
+}
+
+.location-button{
+    margin: 0 ;
+}

@@ -1,0 +1,67 @@
+@use '../abstracts/functions'as func;
+@use '../abstracts/mixins' as mixin;
+@use '../abstracts/variables' as vars;
+
+@use 'sass:map';
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+   @include mixin.linearGradient2Colors(0deg,#FFD88B,#E55851);
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+main{
+    .wrapper{
+    background-color: white;
+    width: 80vw;
+    margin: 0 auto;
+    
+    padding-bottom: func.pxtorem(50);
+    &__fluid{
+        padding: func.pxtorem(50) 0;
+        
+        width: 100vw;
+        padding-top: func.pxtorem(100) ;
+
+        &--dark{
+            background-color: map.get($map:vars.$secondary-colors,$key:semiBlack);
+            
+            padding-top: func.pxtorem(30) ;
+        }
+        }
+        
+    }
+    section{
+        
+        padding-top: func.pxtorem(50);
+        margin: func.pxtorem(0) func.pxtorem(50);
+    }
+}
+
+p{
+    
+}
+
+h1,h2,h3,h4,h5{
+   margin: func.pxtorem(20) 0;
+}
+
+.block{
+margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @for $i from 1 through 15 {
+        &__color-#{$i} {
+            width: func.pxtorem(100);
+            height: func.pxtorem(100);
+            margin: func.pxtorem(20) func.pxtorem(20) 0 0 ;
+            background-color: map.get($map:vars.$colors, $key: color#{$i});
+            border: 1px solid map.get($map:vars.$colors, $key: color9);;
+        }
+    }
+}

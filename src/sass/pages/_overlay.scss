@@ -1,0 +1,314 @@
+
+
+@use '../abstracts/variables' as vars;
+@use '../abstracts/functions' as func;
+@use '../abstracts/extends';
+@use 'sass:map';
+
+.avatar-overlay,
+.friend-overlay,
+.add-users-overlay,
+.credentials-overlay {
+    z-index: 30;
+    height: 100vh;
+    width: 100vw;
+    background-color: map.get($map:vars.$secondary-colors, $key:semiBlack);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+    .add-users-container{
+        overflow-y: scroll !important;
+        height: 62vh;
+    }
+
+    .avatar {
+        padding: func.pxtorem(20) func.pxtorem(40);
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: func.pxtorem(50);
+        column-gap: func.pxtorem(30);
+
+        div {
+            display: flex;
+            justify-content: center;
+
+            [type=radio] {
+                position: absolute;
+                opacity: 0;
+
+            }
+
+            [type=radio]:checked+div {
+                outline: 3px solid map.get($map:vars.$colors, $key:color2);
+                border-radius: 50%;
+            }
+
+        }
+    }
+
+    &__header {
+        max-width: func.pxtorem(336);
+        padding: func.pxtorem(50) 0 0 func.pxtorem(50);
+    }
+
+    &__text {
+        text-align: center;
+        padding: func.pxtorem(20) 0;
+
+    }
+
+    &__input {
+        display: flex;
+        justify-content: center;
+
+        input {
+            position: absolute;
+            left: 0;
+            opacity: 0;
+            width: 70vw;
+            margin: 0 auto;
+            padding: func.pxtorem(5) 0;
+            margin-left: func.pxtorem(55);
+        }
+    }
+
+    &__button {
+        margin: 0 auto;
+        width: 75vw;
+        margin-top: func.pxtorem(10);
+        margin-bottom: func.pxtorem(5);
+
+        &--save {
+            width: 40vw;
+            margin: func.pxtorem(20) 30vw;
+        }
+    }
+
+    &__header {
+        padding-bottom: func.pxtorem(40);
+    }
+
+    .add-people {
+        width: 75vw;
+        margin: func.pxtorem(20) auto;
+        @extend %flex-space-between;
+
+        &__image {
+            background-size: cover;
+            border-radius: 50%;
+        }
+
+        h5 {
+            width: 48vw;
+
+        }
+
+        div {
+            position: relative;
+
+            label {
+
+                &:before {
+                    content: " ";
+                    display: inline-block;
+                    width: func.pxtorem(20);
+                    height: func.pxtorem(20);
+                    border-radius: 50%;
+                    border: 2px solid map.get($map:vars.$secondary-colors, $key:grey);
+                    vertical-align: middle;
+                }
+            }
+
+            input {
+                display: none;
+            }
+
+            input[type='radio']:checked+label:after {
+
+                content: " ";
+                border-radius: 50%;
+                width: func.pxtorem(24);
+                height: func.pxtorem(24);
+                position: absolute;
+                left: 0;
+                background-color: map.get($map:vars.$secondary-colors, $key:green);
+            }
+        }
+    }
+
+}
+
+
+
+.delete-event-overlay,
+.leave-event-overlay,
+.delete-account-overlay {
+    @extend .avatar-overlay;
+    @extend %flex-column-center;
+
+    &__header {
+        word-break: break-word;
+        width: 90vw;
+        text-align: center;
+        margin-bottom: func.pxtorem(75);
+    }
+
+    &__button-container {
+        display: flex;
+        gap: 30px;
+
+        .button__accept {
+            width: 25vw;
+        }
+
+        .button__reject {
+            width: 25vw;
+        }
+    }
+}
+
+.friend-request-overlay {
+    @extend .leave-event-overlay;
+    
+    &__avatar {
+        margin-bottom: func.pxtorem(30);
+        border-radius: 50%;
+        background-size: contain;
+    }
+
+    &__header {
+        text-align: center;
+        width: 70vw;
+        margin-bottom: func.pxtorem(30);
+    }
+
+    &__button-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        width: 100vw;
+    }
+}
+
+.credentials-overlay {
+    @extend %flex-column-center;
+
+    &__header {
+        width: 85vw;
+        text-align: center;
+        padding-left: 0px;
+        margin: 0 auto;
+    }
+
+    &__credential-container {
+        @extend %flex-column;
+        align-items: center;
+        width: 85vw;
+
+        .form {
+
+            div {
+                margin: 0 auto;
+
+                input {
+                    padding: func.pxtorem(7);
+                    margin-bottom: func.pxtorem(10);
+                    color: map.get($map:vars.$secondary-colors, $key:semiBlack);
+                }
+            }
+        }
+
+        .button__warning {
+            width: 50vw;
+            margin: 0;
+            margin-top: func.pxtorem(20);
+            margin-bottom: func.pxtorem(150);
+        }
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    {
+        -webkit-text-fill-color: map.get($map:vars.$secondary-colors, $key:semiBlack);
+        transition: background-color 5000s ease-in-out 0s;
+    }
+}
+
+.popup-container {
+    @extend %flex-column-center;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    background-color: map.get($map:vars.$secondary-colors, $key:semiBlack);
+    color: map.get($map:vars.$secondary-colors, $key:white);
+    height: 25vh;
+    width: 80vw;
+    border-radius: vars.$border-radius;
+    z-index: 200;
+
+    h4 {
+        text-align: center;
+        margin: func.pxtorem(10) 0;
+
+    }
+
+    p {
+        padding-bottom: func.pxtorem(30);
+    }
+
+    div {
+        display: flex;
+        gap: 15px;
+
+    }
+}
+
+.popup-panic-container {
+    @extend .popup-container;
+    height: 40vh;
+    z-index: 1000;
+
+    h4 {
+        margin-bottom: func.pxtorem(20);
+    }
+
+    div {
+        .button__invite {
+            width: 31vw;
+            margin: func.pxtorem(20) 0;
+
+        }
+    }
+
+    .button__warning {
+        width: 30vw;
+        margin: 0;
+        margin-bottom: func.pxtorem(15);
+    }
+
+    p {
+        width: 65vw;
+        padding: func.pxtorem(5);
+    }
+
+    &__location {
+        display: flex;
+        width: 70vw;
+        padding-left: 2.5vw;
+        gap: 0 !important;
+
+        p:first-child {
+            flex-basis: 1%;
+        }
+
+        .data {
+            flex-basis: 99%;
+        }
+    }
+}

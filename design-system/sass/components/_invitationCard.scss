@@ -1,0 +1,45 @@
+@use '../abstracts/functions' as func;
+@use '../abstracts/variables' as vars;
+@use '../abstracts/extends';
+
+@use 'sass:map';
+
+.invitation{
+   @extend %flex-align-center;
+    
+    div{
+        width: 22vw;
+        @extend %flex-column;
+        padding-right: func.pxtorem(50);
+    }
+    &__button{
+        background-color: white;
+        font-family: vars.$header-font;
+        @extend %flex-space-between;
+        border-radius: func.pxtorem(10);
+        padding: func.pxtorem(10);
+        border: none;
+        margin: func.pxtorem(10) 0;
+        box-shadow: 0 0px 5px rgba(34, 34, 34, 0.3);
+        i{
+            color: map.get($map:vars.$colors,$key:color1);
+            padding-left: 10px;
+        }
+    }
+
+    &__accept{
+        font-family: vars.$header-font;
+        background-color: map.get($map:vars.$colors,$key:color13);
+        color: map.get($map:vars.$secondary-colors,$key:white);
+        padding: func.pxtorem(5) func.pxtorem(10);
+        margin: func.pxtorem(5);
+        width: 15vw;
+        font-weight: 600;
+    }
+
+    &__reject{
+        @extend .invitation__accept;
+        background-color: map.get($map:vars.$colors,$key:color14);
+    }
+    
+}

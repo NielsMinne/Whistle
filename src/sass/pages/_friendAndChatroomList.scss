@@ -1,0 +1,100 @@
+@use '../abstracts/functions' as func;
+@use '../abstracts/variables' as vars;
+@use '../abstracts/extends';
+
+@use 'sass:map';
+
+.container-wrapper {
+
+    .friend-container,
+    .chatroom-container {
+        position: relative;
+        max-width: func.pxtorem(384);
+        width: 80vw;
+        margin: 0 auto;
+
+        h5 {
+            padding-top: func.pxtorem(30);
+            margin-bottom: func.pxtorem(5);
+
+        }
+
+        hr {
+            max-width: func.pxtorem(240);
+            width: 50vw;
+        }
+
+        .friend-icon {
+            position: absolute;
+            right: -10px;
+            top: 25px;
+        }
+
+        &__friend-card {
+            margin-top: func.pxtorem(10);
+            padding: func.pxtorem(5) 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: map.get($map:vars.$secondary-colors, $key:white);
+            border-radius: vars.$border-radius;
+        }
+
+        &__chatroom-card {
+            @extend .friend-container__friend-card;
+            justify-content: flex-start;
+
+        }
+
+        &__avatar {
+            border-radius: 50%;
+            margin-left: func.pxtorem(10);
+            background-size: cover;
+            border: 2px solid map.get($map:vars.$colors, $key:color2);
+        }
+
+        &__name {
+            padding: 0 func.pxtorem(10) !important;
+            max-width: func.pxtorem(240);
+            width: 50vw;
+            color: map.get($map:vars.$secondary-colors, $key:black);
+            margin: 0 !important;
+        }
+
+        &__delete {
+            color: map.get($map:vars.$secondary-colors, $key:avatarRed);
+            margin-right: func.pxtorem(10);
+        }
+
+        &__chat {
+            color: map.get($map:vars.$colors, $key:color2);
+            padding-right: func.pxtorem(10);
+            transform: scale(1.3);
+        }
+
+        .friends-container__invitation-container,
+        .friends-container__accepted-container {
+            @extend %flex-column;
+
+            label {
+                margin: func.pxtorem(10) 0;
+            }
+
+            button {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: func.pxtorem(10);
+                padding: func.pxtorem(10) func.pxtorem(15);
+                text-align: start;
+
+                p {
+                    display: none;
+                }
+
+                i {
+                    color: map.get($map:vars.$colors, $key:color2);
+                }
+            }
+        }
+    }
+}

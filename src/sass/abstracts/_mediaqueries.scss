@@ -1,0 +1,15 @@
+/**
+* Media queries
+*/
+@use '../abstracts/variables' as vars;
+
+
+@mixin desktop{
+    @media (min-width: 480px) {
+      @content;
+    }
+  }
+
+
+
+ 

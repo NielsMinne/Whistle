@@ -1,0 +1,24 @@
+/**
+* helpers
+*/
+
+@use 'sass:map';
+@use '../abstracts/variables' as vars;
+@use '../abstracts/functions' as func;
+
+
+@each $image in vars.$user-images{
+    .avatar__image-#{$image}{
+        background-image: url('../assets/avatars/#{$image}.png');
+        background-size: cover;
+        height: func.pxtorem(75);
+    }
+}
+
+.hide{
+    visibility: hidden;
+}
+
+.no-display{
+    display: none;
+}

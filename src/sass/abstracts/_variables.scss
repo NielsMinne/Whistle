@@ -1,0 +1,53 @@
+/**
+* Variables
+*/
+
+//Fonts
+$text-font: 'roboto',sans-serif;
+$header-font: 'raleway',sans-serif;
+
+
+//Sizes
+$font-size-small: 12.80;
+$font-size-p: 16;
+$font-size-h1: 48.83;
+$font-size-h2: 39.06;
+$font-size-h3: 31.25;
+$font-size-h4: 25.00;
+$font-size-h5: 20;
+
+
+//Color Variables
+$colors: (color1: #fac682,
+color2: #f7a539,
+color3: #f69414,
+color4: #db8009,
+color5:#b76b07,
+color6: #ffffff,
+color7: #e6e6e6,
+color8: #b3b3b3,
+color9: #808080,
+color10:#4c4c4c,
+color11: #191919,
+color12: #821611,
+color13: #4ec475,
+color14: #E3746F,
+) !default;
+
+$secondary-colors: (panicRed: #FC2016,
+hoverRed: #d1180f,
+avatarRed: #DA463F,
+green: #31ac31,
+white: #FFF ,
+Black:#111,
+semiBlack: #222,
+grey:#ffffff33);
+
+$box-shadow: 0 3px 5px rgba(34, 34, 34, 0.3);
+
+$border-radius: 10px;
+
+$gap: 10px;
+ //images for a for loop --> adding image = change amount 
+
+$user-images: "bunny","cat","pinguin","dog","panda","robot","frog","piglet","alien";

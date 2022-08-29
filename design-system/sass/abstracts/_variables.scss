@@ -1,0 +1,70 @@
+/**
+* Variables
+*/
+
+//Fonts
+$text-font: 'roboto',sans-serif;
+$header-font: 'raleway',sans-serif;
+
+//weight
+
+
+//Sizes
+$font-size-small: 12.80;
+$font-size-p: 16;
+$font-size-h1: 48.83;
+$font-size-h2: 39.06;
+$font-size-h3: 31.25;
+$font-size-h4: 25.00;
+$font-size-h5: 20;
+
+ 
+//variables to use in grid.scss for columns and rows 
+
+
+//Media Query Variables
+$small-width: 768px;
+$medium-width: 958px;
+$large-width:1200px;
+$xl-width:1438px;
+$xxl-width:1680px;
+
+//Color Variables
+$colors: (color1: #fac682,
+color2: #f7a539,
+color3: #f69414,
+color4: #db8009,
+color5:#b76b07,
+color6: #ffffff,
+color7: #e6e6e6,
+color8: #b3b3b3,
+color9: #808080,
+color10:#4c4c4c,
+color11: #191919,
+color12: #821611,
+color13: #4ec475,
+color14: #E3746F,
+) !default;
+
+$secondary-colors: (panicRed: #FC2016,
+hoverRed: #d1180f,
+avatarRed: #DA463F,
+green: #31ac31,
+white: #FFF ,
+Black:#111,
+semiBlack: #222,
+grey:#ffffff33);
+
+//Images variables
+$event-images:
+(
+1:"../assets/christmas_party.jpg",
+2:"../assets/new_year_party.jpg",
+3:"../assets/drinks_with_friends.jpg",
+4:"../assets/new_year_party_dinner.jpg",
+);
+
+$base-avatar: "../assets/avatars/Whistle.png";
+ //Amount of images for a for loop --> adding image = change
+
+$user-images: "bunny","cat","pinguin","dog","panda","robot","frog","piglet","alien";

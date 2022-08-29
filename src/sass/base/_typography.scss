@@ -1,0 +1,55 @@
+/**
+* Typography
+*/
+
+@use '../abstracts/variables' as vars;
+@use '../abstracts/functions' as func;
+
+@use "sass:map";
+
+body{
+    font-family: vars.$text-font;
+    color: map.get($map:vars.$secondary-colors,$key:white);
+}
+
+h1,h2,h3,h4,h5{
+    font-family: vars.$header-font;
+}
+
+p,small{
+    font-family: vars.$text-font;
+}
+
+h1{
+    font-size: func.pxtorem(vars.$font-size-h1);
+    font-weight: 800;
+}
+
+h2{
+    font-size: func.pxtorem(vars.$font-size-h2);
+    font-weight: 800;
+}
+
+h3{
+    font-size: func.pxtorem(vars.$font-size-h3);
+    
+}
+
+h4{
+    font-size: func.pxtorem(vars.$font-size-h4);
+    font-weight: 600;
+    
+}
+
+h5{
+    font-size: func.pxtorem(vars.$font-size-h5);
+    font-weight: 500;
+}
+
+p{
+    font-size: func.pxtorem(vars.$font-size-p);
+}
+
+small{
+    font-size: func.pxtorem(vars.$font-size-small);
+}

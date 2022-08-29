@@ -1,0 +1,59 @@
+@use '../abstracts/functions'as func;
+@use '../abstracts/mediaqueries'as media;
+
+.container-wrapper {
+
+    .create {
+
+        &__text {
+            max-width: func.pxtorem(336);
+            width: 70vw;
+            margin: 0 auto;
+            padding-top: func.pxtorem(30);
+            padding-bottom: func.pxtorem(30);
+        }
+
+        &__form {
+            max-width: func.pxtorem(336);
+            width: 70vw;
+            margin: 0 auto;
+
+            .form {
+                gap: func.pxtorem(20);
+
+
+                div {
+                    max-width: func.pxtorem(336);
+                    width: 70vw;
+                }
+
+                .location-button {
+                    max-width: func.pxtorem(336);
+                    width: 70vw;
+                    margin-bottom: 0;
+                }
+
+                .create-button {
+                    max-width: func.pxtorem(240);
+                    width: 50vw;
+                    margin-left: 10vw;
+                    margin-bottom: 10vh;
+
+                    @include media.desktop {
+                        margin-left: func.pxtorem(45);
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+.marker {
+    background-image: url('../../assets/other/mapMarker.png');
+    background-size: contain;
+}
+
+#mapContainer {
+    gap: 5px;
+}

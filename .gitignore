@@ -1,0 +1,17 @@
+# Ignore generated files
+dist/*
+build/*
+node_modules/*
+.DS_Store
+Desktop.ini
+Spotlight-V100
+.Trashes
+._*
+Thumbs.db
+.vscode
+.parcel-cache
+.cache
+*.local
+sendgrid.env
+
+

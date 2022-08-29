@@ -1,0 +1,55 @@
+@use '../abstracts/functions'as func;
+@use '../abstracts/mixins' as mixin;
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mediaqueries' as media;
+
+@use 'sass:map';
+
+#app {
+    height: 100vh;
+    overflow-x: hidden;
+
+    .home-list {
+        position: relative;
+        text-align: center;
+        padding-top: func.pxtorem(20);
+        max-width: func.pxtorem(336);
+        width: 70vw;
+        margin: 0 auto;
+
+        p {
+            padding-bottom: func.pxtorem(10);
+        }
+
+        &__grid-icon {
+            position: absolute;
+            top: 25px;
+            right: -38px;
+        }
+
+        &__whistle {
+            width: 40vw;
+            position: absolute;
+            bottom: 0;
+            left: 30%;
+            padding: func.pxtorem(15);
+
+            &--active {
+                @extend .home-list__whistle;
+                background-color: map.get($map:vars.$secondary-colors, $key: panicRed);
+                box-shadow: 0 3px 4px hsla(0, 0%, 100%, 0.37);
+            }
+        }
+    }
+
+    .home-grid {
+        @extend .home-list;
+
+        &__container {
+            margin-top: func.pxtorem(15);
+        }
+    }
+
+}
+
+

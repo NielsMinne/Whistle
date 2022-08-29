@@ -1,0 +1,158 @@
+@use '../abstracts/functions' as func;
+@use '../abstracts/mediaqueries' as media;
+@use '../abstracts/variables' as vars;
+@use '../abstracts/extends';
+
+@use 'sass:map';
+
+.my-hosted-events,
+.my-event-invitation,
+.my-upcoming-event {
+    max-width: func.pxtorem(408);
+    width: 85vw;
+    margin: 0 auto;
+
+    .information-container {
+        display: flex;
+        gap: vars.$gap;
+    }
+
+
+    &__information {
+        max-width: func.pxtorem(360);
+        width: 75vw;
+        height: func.pxtorem(100);
+
+        p {
+            font-size: func.pxtorem(14);
+        }
+    }
+
+    &__map {
+        @extend %flex-column-align-end;
+        text-align: end;
+
+        p {
+            max-width: func.pxtorem(192);
+            width: 40vw;
+            font-size: 14px;
+        }
+
+        .map-container {
+            border-radius: vars.$border-radius;
+            height: 10vh;
+            max-width: func.pxtorem(168);
+            ;
+            width: 35vw;
+
+            .mapboxgl-canvas-container {
+                .mapboxgl-canvas {
+                    position: absolute;
+                    top: -100px;
+                    left: -120px;
+                }
+
+                .marker {
+                    position: absolute;
+                    top: -120px;
+                    left: -125px;
+                }
+            }
+
+            .mapboxgl-control-container {
+                display: none;
+            }
+        }
+    }
+
+    h5 {
+        font-weight: 600;
+    }
+
+    hr {
+        max-width: func.pxtorem(173);
+        width: 36vw;
+    }
+
+    &__image {
+
+        height: func.pxtorem(150);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__text {
+        text-align: center;
+        padding-top: func.pxtorem(25);
+        flex-grow: 1;
+    }
+
+    p {
+        padding: func.pxtorem(3);
+        color: map.get($map:vars.$secondary-colors, $key: black);
+    }
+
+    &__description,
+    &__information,
+    &__participants {
+
+        &--title {
+            padding-bottom: func.pxtorem(5);
+            padding-top: func.pxtorem(25);
+        }
+
+        &--container {
+            height: func.pxtorem(150);
+        }
+    }
+
+
+    &__button {
+
+        &--invite,
+        &--warning {
+            max-width: func.pxtorem(264);
+            width: 55vw;
+            margin-left: 15vw;
+
+            @include media.desktop {
+                margin-left: 5vw;
+            }
+
+            &--hover {
+                max-width: func.pxtorem(264);
+                margin-left: 15vw;
+            }
+        }
+
+        &--normal {
+            max-width: func.pxtorem(360);
+            width: 75vw;
+            margin-left: 5vw;
+
+            @include media.desktop {
+                margin-left: 0;
+            }
+        }
+
+    }
+
+    &__button-container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__title-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: func.pxtorem(432);
+        width: 90vw;
+    }
+
+}
+
+#editEvent {
+    padding-top: func.pxtorem(20);
+    transform: scale(0.85);
+}

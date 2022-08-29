@@ -1,0 +1,100 @@
+@use '../abstracts/functions' as func;
+@use '../abstracts/variables' as vars;
+@use '../abstracts/extends';
+
+@use 'sass:map';
+
+
+.chat{
+    height: 50vh;
+    width: 50vw;
+   
+    margin: 0 auto;
+
+    &__field{
+        @extend %flex-column;
+        overflow: scroll;
+        overflow-x: hidden;
+        height: 40vh;
+        background-color: map.get($map:vars.$colors,$key:color7);
+        border-radius: func.pxtorem(10) func.pxtorem(10) 0 0;
+    }
+
+    &__input{
+        display: flex;
+        height: 5vh;
+        width: 50vw;
+        input{
+            height: 5vh;
+            width: 45vw;
+            border-radius: 0 0 0 func.pxtorem(10);
+            padding-left: func.pxtorem(10);
+            
+        }
+        button{
+            box-shadow: none;
+            width: 5vw;
+            height: 5vh;
+            border-radius: 0;
+            background-color: map.get($map:vars.$colors,$key:color2);
+            border-radius: 0 0  func.pxtorem(10) 0;
+            i{
+                color: map.get($map:vars.$secondary-colors,$key:white);
+            }
+        }
+    }
+
+    &__bubble{
+        margin: func.pxtorem(10);
+        width: 20vw;
+        padding-bottom: func.pxtorem(10);
+        p{
+            padding: func.pxtorem(10);
+            padding-bottom: func.pxtorem(20);
+        }
+
+        small{
+            padding: func.pxtorem(10) 0 0 func.pxtorem(10);
+            
+            
+        }
+        &--me{
+            @extend .chat__bubble;
+            background-color: map.get($map:vars.$colors,$key:color1);
+            color: map.get($map:vars.$secondary-colors,$key:white);
+            border-radius: func.pxtorem(10) func.pxtorem(10) 0 func.pxtorem(10);
+            align-self: flex-end
+            
+            
+        }
+        &--other{
+            @extend .chat__bubble;
+            background-color: map.get($map:vars.$colors,$key:color2);
+            color: map.get($map:vars.$secondary-colors,$key:white);
+            border-radius: 0 0 func.pxtorem(10) 0;
+            align-self: flex-start;
+        }
+    }
+}
+
+//scrollbar
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: map.get($map:vars.$colors,$key:color1);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: map.get($map:vars.$colors,$key:color2);
+  }

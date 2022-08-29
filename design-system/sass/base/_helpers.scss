@@ -1,0 +1,26 @@
+/**
+* helpers
+*/
+
+@use 'sass:map';
+@use '../abstracts/variables' as vars;
+@use '../abstracts/functions' as func;
+@use '../abstracts/mediaqueries' as media;
+
+@each $image in vars.$user-images{
+    .user__image-#{$image}{
+        background-image: url('../assets/avatars/#{$image}.png');
+        background-size: cover;
+        height: func.pxtorem(75);
+        width: func.pxtorem(75);
+        
+    }
+}
+
+.radius-top{
+    border-radius: func.pxtorem(10) func.pxtorem(10) 0 0;
+}
+
+.radius-bottom{
+    border-radius: 0 0 func.pxtorem(10) func.pxtorem(10) ;
+}

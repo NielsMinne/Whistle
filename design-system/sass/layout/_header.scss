@@ -1,0 +1,54 @@
+@use '../abstracts/extends';
+@use '../abstracts/functions' as func;
+@use '../abstracts/variables' as vars;
+
+@use 'sass:map';
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    nav{
+        @extend %flex-space-between;
+        height: 8vh;
+        background-color: #222;
+       
+        div{
+            @extend %flex-align-center;
+            padding-left: func.pxtorem(200);
+            img{
+                height: 5vh;
+                padding-right: func.pxtorem(10);
+            }
+            h3{
+                @extend %flex-align-center;
+                color: white;
+            }
+        }
+
+        ul{
+            width: 55vw;
+            display: flex;
+            
+            li{
+                @extend %flex-align-center;
+                height: 8vh;
+                padding: 0 func.pxtorem(10);
+                list-style-type: none;
+                &:hover{
+                    background-color: #333;
+                    border-bottom: 6px solid orange;
+                }
+                a{
+                    text-decoration: none;
+                    color: #EEE;
+                   
+                }
+            }
+        }
+    }
+}
+
+span{
+    color: map.get($map:vars.$colors,$key:color12);
+}

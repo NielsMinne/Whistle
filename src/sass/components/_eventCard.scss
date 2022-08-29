@@ -1,0 +1,78 @@
+@use '../abstracts/functions'as func;
+@use '../abstracts/variables'as vars;
+@use 'sass:map';
+
+.host-container,
+.upcoming-events-container {
+    display: flex;
+    max-width: func.pxtorem(480);
+    width: 100vw;
+    height: func.pxtorem(250);
+    gap: func.pxtorem(25);
+    overflow: scroll;
+    padding: func.pxtorem(20) func.pxtorem(30);
+
+    .event {
+        &__card {
+            background-color: white;
+            position: relative;
+            width: func.pxtorem(150);
+            max-width: func.pxtorem(192);
+            box-shadow: vars.$box-shadow;
+            border-radius: 10px;
+            height: func.pxtorem(200);
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &__uid {
+            display: none;
+        }
+
+        &__image {
+            position: relative;
+            background-size: cover;
+            height: 12.5vh;
+            max-width: func.pxtorem(192);
+            width: func.pxtorem(150);
+            border-radius: vars.$border-radius vars.$border-radius 0 0;
+        }
+
+        h4 {
+            padding-top: func.pxtorem(10);
+            padding-bottom: func.pxtorem(5);
+        }
+
+        &__time,
+        &__name {
+            width: func.pxtorem(150) !important;
+            font-size: func.pxtorem(vars.$font-size-p);
+            color: map.get($map:vars.$secondary-colors, $key:black);
+            margin: 0;
+            padding-left: func.pxtorem(15);
+            padding-bottom: func.pxtorem(30);
+        }
+
+        &__info {
+            position: absolute;
+            right: func.pxtorem(10);
+            bottom: func.pxtorem(10);
+            font-size: func.pxtorem(14);
+        }
+
+        &__date {
+            font-family: vars.$header-font;
+            font-weight: 700;
+            max-width: func.pxtorem(264);
+            width: func.pxtorem(55);
+            position: absolute;
+            padding: func.pxtorem(5) 0 func.pxtorem(5) func.pxtorem(10);
+            border-radius: vars.$border-radius 0 vars.$border-radius 0;
+            color: map.get($map:vars.$secondary-colors, $key:white);
+            background-color: map.get($map:vars.$secondary-colors, $key:black);
+            z-index: 1;
+        }
+
+    }
+}

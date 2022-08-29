@@ -1,0 +1,126 @@
+@use '../abstracts/mixins'as mixin;
+@use '../abstracts/variables'as vars;
+@use '../abstracts/functions'as func;
+
+
+.animation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    &__logo {
+        max-width: func.pxtorem(144);
+        width: 30vw;
+        transform: translateY(-100px);
+        opacity: 0;
+        animation-name: whistle-logo;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    &__name {
+        opacity: 0;
+        animation-name: whistle;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+}
+
+@keyframes whistle {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: .5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes whistle-logo {
+    0% {
+        opacity: 0;
+        transform: scale(1, 1) translateY(-100px);
+    }
+
+    20% {
+        opacity: .7;
+        transform: scale(1, 1) translateY(0);
+    }
+
+    21% {
+        opacity: .71;
+        transform: scale(1.1, .9) translateY(0);
+    }
+
+    25% {
+        opacity: .75;
+        transform: scale(.9, 1.1) translateY(-10px);
+    }
+
+    30% {
+        opacity: .80;
+        transform: scale(1, 1) translateY(-20px);
+    }
+
+    35% {
+        opacity: .85;
+        transform: scale(1, 1) translateY(-30px);
+    }
+
+    38% {
+        opacity: .85;
+        transform: scale(1, 1) translateY(-32px);
+    }
+
+    41% {
+        opacity: .9;
+        transform: scale(1, 1) translateY(-30px);
+    }
+
+    46% {
+        opacity: .96;
+        transform: scale(1, 1) translateY(-20px);
+    }
+
+    51% {
+        opacity: 1;
+        transform: scale(1, 1) translateY(-10px);
+    }
+
+    57% {
+        opacity: 1;
+        transform: scale(1, 1) translateY(0);
+    }
+
+    59% {
+        opacity: 1;
+        transform: scale(1.05, .95) translateY(0);
+    }
+
+    64% {
+        opacity: 1;
+        transform: scale(1, 1) translateY(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1, 1) translateY(0);
+    }
+}

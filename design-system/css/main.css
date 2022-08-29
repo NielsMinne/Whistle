@@ -1,0 +1,1237 @@
+@import url("https://use.typekit.net/hkv0lvk.css");
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/**
+* Variables
+*/
+/**
+* Functions
+*/
+/**
+* Base
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  border-radius: 0.625rem;
+  box-shadow: 0 3px 5px rgba(34, 34, 34, 0.3);
+}
+
+/**
+* Media queries
+*/
+/**
+* helpers
+*/
+.user__image-bunny {
+  background-image: url("../assets/avatars/bunny.png");
+  background-size: cover;
+  height: 4.6875rem;
+  width: 4.6875rem;
+}
+
+.user__image-cat {
+  background-image: url("../assets/avatars/cat.png");
+  background-size: cover;
+  height: 4.6875rem;
+  width: 4.6875rem;
+}
+
+.user__image-pinguin {
+  background-image: url("../assets/avatars/pinguin.png");
+  background-size: cover;
+  height: 4.6875rem;
+  width: 4.6875rem;
+}
+
+.user__image-dog {
+  background-image: url("../assets/avatars/dog.png");
+  background-size: cover;
+  height: 4.6875rem;
+  width: 4.6875rem;
+}
+
+.user__image-panda {
+  background-image: url("../assets/avatars/panda.png");
+  background-size: cover;
+  height: 4.6875rem;
+  width: 4.6875rem;
+}
+
+.user__image-robot {
+  background-image: url("../assets/avatars/robot.png");
+  background-size: cover;
+  height: 4.6875rem;
+  width: 4.6875rem;
+}
+
+.user__image-frog {
+  background-image: url("../assets/avatars/frog.png");
+  background-size: cover;
+  height: 4.6875rem;
+  width: 4.6875rem;
+}
+
+.user__image-piglet {
+  background-image: url("../assets/avatars/piglet.png");
+  background-size: cover;
+  height: 4.6875rem;
+  width: 4.6875rem;
+}
+
+.user__image-alien {
+  background-image: url("../assets/avatars/alien.png");
+  background-size: cover;
+  height: 4.6875rem;
+  width: 4.6875rem;
+}
+
+.radius-top {
+  border-radius: 0.625rem 0.625rem 0 0;
+}
+
+.radius-bottom {
+  border-radius: 0 0 0.625rem 0.625rem;
+}
+
+/**
+* Typography
+*/
+body {
+  font-family: "roboto", sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "raleway", sans-serif;
+}
+
+p, small {
+  font-family: "roboto", sans-serif;
+}
+
+h1 {
+  font-size: 3.051875rem;
+}
+
+h2 {
+  font-size: 2.44125rem;
+}
+
+h3 {
+  font-size: 1.953125rem;
+}
+
+h4 {
+  font-size: 1.5625rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1rem;
+}
+
+small {
+  font-size: 0.8rem;
+}
+
+/**
+* Extends
+*/
+.add-people, .invitation__button, header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.animation, .chat__field, .invitation div, form .form, form .form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.animation div, .user__avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.invitation, .user, form, header nav div, header nav div h3, header nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+header nav {
+  height: 8vh;
+  background-color: #222;
+}
+header nav div {
+  padding-left: 12.5rem;
+}
+header nav div img {
+  height: 5vh;
+  padding-right: 0.625rem;
+}
+header nav div h3 {
+  color: white;
+}
+header nav ul {
+  width: 55vw;
+  display: flex;
+}
+header nav ul li {
+  height: 8vh;
+  padding: 0 0.625rem;
+  list-style-type: none;
+}
+header nav ul li:hover {
+  background-color: #333;
+  border-bottom: 6px solid orange;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #EEE;
+}
+
+span {
+  color: #821611;
+}
+
+.button__normal, .button__link, .button__link:hover, .button__login, .button__login:hover, .button__invite, .button__panic, .button__panic--active, .button__panic--active:hover, .button__panic:hover, .button__warning, .button__warning:hover {
+  margin-right: 1.25rem;
+  margin-bottom: 1.5625rem;
+  padding: 0.625rem 1.875rem;
+  background-color: #FFF;
+  border: none;
+  border-radius: 0.625rem;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+  color: #111;
+}
+.button__normal:hover, .button__link:hover, .button__login:hover, .button__invite:hover, .button__panic:hover, .button__panic--active:hover, .button__warning:hover {
+  border: 1px solid #111;
+  cursor: pointer;
+}
+.button__invite, .button__panic, .button__panic--active, .button__panic--active:hover, .button__panic:hover, .button__warning, .button__warning:hover {
+  background-color: #f69414;
+  color: #ffffff;
+}
+.button__invite:hover, .button__panic:hover, .button__panic--active:hover, .button__warning:hover {
+  background-color: #fac682;
+  color: #191919;
+  cursor: pointer;
+  border: none;
+}
+.button__invite:disabled, .button__panic:disabled, .button__panic--active:disabled, .button__warning:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.button__invite:disabled:hover, .button__panic:disabled:hover, .button__panic--active:disabled:hover, .button__warning:disabled:hover {
+  background-color: #f69414;
+  color: #ffffff;
+}
+.button__warning, .button__warning:hover {
+  background-color: #821611;
+  color: #ffffff;
+}
+.button__warning:hover {
+  background-color: #d1180f;
+}
+.button__panic, .button__panic--active, .button__panic--active:hover, .button__panic:hover {
+  padding: 0.625rem 1.25rem;
+  background-color: #821611;
+  border-radius: 1.875rem;
+  color: #ffffff;
+}
+.button__panic--active, .button__panic--active:hover {
+  background-color: #FC2016;
+  box-shadow: 0 3px 4px rgba(255, 255, 255, 0.37);
+}
+.button__login, .button__login:hover {
+  border: 2px solid #111;
+  border-radius: 1.875rem;
+  padding: 0.625rem 4.375rem;
+}
+.button__login:hover {
+  background-color: #fac682;
+  color: #FFF;
+  border: 2px solid #FFF;
+}
+.button__link, .button__link:hover {
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  font-weight: 600;
+}
+.button__link:hover {
+  text-decoration: underline;
+}
+
+form .form {
+  gap: 0.9375rem;
+}
+form .form div {
+  margin-right: 6.25rem;
+  width: 20vw;
+  position: relative;
+  overflow: hidden;
+}
+form .form div select {
+  margin-top: 1.25rem;
+  padding: 0 1.25rem 0 0;
+}
+form .form div select option {
+  color: #db8009;
+  text-align: center;
+}
+form .form__input {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  color: black;
+  padding-top: 1.25rem;
+  border: none;
+  outline: none;
+}
+form .form__input::placeholder {
+  opacity: 0;
+}
+form .form__input:focus::placeholder {
+  opacity: 1;
+}
+form .form__input:focus + label .form__label-name, form .form__input:valid + label .form__label-name {
+  transform: translateY(-100%);
+  font-size: 14px;
+  color: black;
+}
+form .form__input:focus + label .form__label-name::placeholder, form .form__input:valid + label .form__label-name::placeholder {
+  opacity: 1;
+}
+form .form__input:focus + label::after, form .form__input:valid + label::after {
+  transform: translateX(0%);
+}
+form .form__label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+form .form__label::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-bottom: 2px solid #222;
+  left: -1px;
+  bottom: 0;
+  transform: translateX(-100%);
+  transition: all 0.3 ease;
+}
+form .form__label-name {
+  position: absolute;
+  bottom: 5px;
+  color: black;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+form .form__account-div {
+  height: 12.5rem;
+}
+form .form__account-label {
+  border-bottom: 2px solid #111;
+  width: 7.8125rem;
+}
+form .form__account-input, form .form__account-button {
+  margin-top: 0.625rem;
+  border-radius: 0.625rem;
+  padding: 0.1875rem 0.3125rem;
+}
+form .form__account-button {
+  border: none;
+  margin: 0.625rem 0.3125rem;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.178);
+}
+
+.event {
+  display: flex;
+  justify-content: space-around;
+  gap: 3.125rem;
+  padding: 3.125rem 0;
+}
+.event__card {
+  position: relative;
+  width: 12.5rem;
+  box-shadow: 0 3px 5px #222;
+  border-radius: 0.625rem;
+  height: 17.1875rem;
+  overflow: hidden;
+}
+.event__card div {
+  background-color: white;
+  z-index: 51;
+}
+.event__card:hover {
+  cursor: pointer;
+}
+.event__image-1 {
+  background-image: url("../assets/christmas_party.jpg");
+  background-size: cover;
+  height: 9.375rem;
+  width: 12.5rem;
+  border-radius: 10px 10px 0 0;
+  transition: all 0.3s ease;
+}
+.event__image-1:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+.event__image-2 {
+  background-image: url("../assets/new_year_party.jpg");
+  background-size: cover;
+  height: 9.375rem;
+  width: 12.5rem;
+  border-radius: 10px 10px 0 0;
+  transition: all 0.3s ease;
+}
+.event__image-2:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+.event__image-3 {
+  background-image: url("../assets/drinks_with_friends.jpg");
+  background-size: cover;
+  height: 9.375rem;
+  width: 12.5rem;
+  border-radius: 10px 10px 0 0;
+  transition: all 0.3s ease;
+}
+.event__image-3:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+.event__image-4 {
+  background-image: url("../assets/new_year_party_dinner.jpg");
+  background-size: cover;
+  height: 9.375rem;
+  width: 12.5rem;
+  border-radius: 10px 10px 0 0;
+  transition: all 0.3s ease;
+}
+.event__image-4:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+.event__time, .event__name {
+  margin: 0;
+  padding-left: 0.9375rem;
+  padding-top: 0.625rem;
+  z-index: 40;
+}
+.event__info {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 0.875rem;
+}
+.event__date {
+  font-family: "raleway", sans-serif;
+  font-weight: 700;
+  width: 3.4375rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.3125rem 0 0.3125rem 0.625rem;
+  border-radius: 0.625rem x 0 0.625rem 0;
+  color: #FFF;
+  background-color: #111;
+  z-index: 50;
+}
+
+#users {
+  margin: 0;
+}
+#users h2, #users h4 {
+  padding-left: 3.125rem;
+}
+
+.user {
+  background-color: #222;
+  height: 18.75rem;
+  gap: 3.75rem;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.user::-webkit-scrollbar {
+  display: none;
+}
+.user__avatar {
+  width: 4.6875rem;
+  margin-left: 2.5rem;
+}
+.user__image {
+  border-radius: 50%;
+  width: 4.6875rem;
+}
+.user__name {
+  color: #FFF;
+  text-align: center;
+}
+
+.invitation div {
+  width: 22vw;
+  padding-right: 3.125rem;
+}
+.invitation__button {
+  background-color: white;
+  font-family: "raleway", sans-serif;
+  border-radius: 0.625rem;
+  padding: 0.625rem;
+  border: none;
+  margin: 0.625rem 0;
+  box-shadow: 0 0px 5px rgba(34, 34, 34, 0.3);
+}
+.invitation__button i {
+  color: #fac682;
+  padding-left: 10px;
+}
+.invitation__accept, .invitation__reject {
+  font-family: "raleway", sans-serif;
+  background-color: #4ec475;
+  color: #FFF;
+  padding: 0.3125rem 0.625rem;
+  margin: 0.3125rem;
+  width: 15vw;
+  font-weight: 600;
+}
+.invitation__reject {
+  background-color: #E3746F;
+}
+
+.chat {
+  height: 50vh;
+  width: 50vw;
+  margin: 0 auto;
+}
+.chat__field {
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 40vh;
+  background-color: #e6e6e6;
+  border-radius: 0.625rem 0.625rem 0 0;
+}
+.chat__input {
+  display: flex;
+  height: 5vh;
+  width: 50vw;
+}
+.chat__input input {
+  height: 5vh;
+  width: 45vw;
+  border-radius: 0 0 0 0.625rem;
+  padding-left: 0.625rem;
+}
+.chat__input button {
+  box-shadow: none;
+  width: 5vw;
+  height: 5vh;
+  border-radius: 0;
+  background-color: #f7a539;
+  border-radius: 0 0 0.625rem 0;
+}
+.chat__input button i {
+  color: #FFF;
+}
+.chat__bubble, .chat__bubble--other, .chat__bubble--me {
+  margin: 0.625rem;
+  width: 20vw;
+  padding-bottom: 0.625rem;
+}
+.chat__bubble p, .chat__bubble--other p, .chat__bubble--me p {
+  padding: 0.625rem;
+  padding-bottom: 1.25rem;
+}
+.chat__bubble small, .chat__bubble--other small, .chat__bubble--me small {
+  padding: 0.625rem 0 0 0.625rem;
+}
+.chat__bubble--me {
+  background-color: #fac682;
+  color: #FFF;
+  border-radius: 0.625rem 0.625rem 0 0.625rem;
+  align-self: flex-end;
+}
+.chat__bubble--other {
+  background-color: #f7a539;
+  color: #FFF;
+  border-radius: 0 0 0.625rem 0;
+  align-self: flex-start;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fac682;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f7a539;
+}
+
+/**
+* Mixins
+*/
+.animation {
+  align-items: center;
+}
+.animation div {
+  width: 40vw;
+  height: 30vh;
+  background-image: linear-gradient(0deg, #FFD88B, #E55851);
+}
+.animation__logo {
+  width: 6vw;
+  transform: translateY(-100px);
+  opacity: 0;
+  animation-name: whistle-logo;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.animation__name {
+  opacity: 0;
+  animation-name: whistle;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes whistle {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes whistle-logo {
+  0% {
+    opacity: 0;
+    transform: scale(1, 1) translateY(-100px);
+  }
+  20% {
+    opacity: 0.7;
+    transform: scale(1, 1) translateY(0);
+  }
+  21% {
+    opacity: 0.71;
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  25% {
+    opacity: 0.75;
+    transform: scale(0.9, 1.1) translateY(-10px);
+  }
+  30% {
+    opacity: 0.8;
+    transform: scale(1, 1) translateY(-20px);
+  }
+  35% {
+    opacity: 0.85;
+    transform: scale(1, 1) translateY(-30px);
+  }
+  38% {
+    opacity: 0.85;
+    transform: scale(1, 1) translateY(-32px);
+  }
+  41% {
+    opacity: 0.9;
+    transform: scale(1, 1) translateY(-30px);
+  }
+  46% {
+    opacity: 0.96;
+    transform: scale(1, 1) translateY(-20px);
+  }
+  51% {
+    opacity: 1;
+    transform: scale(1, 1) translateY(-10px);
+  }
+  57% {
+    opacity: 1;
+    transform: scale(1, 1) translateY(0);
+  }
+  59% {
+    opacity: 1;
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  64% {
+    opacity: 1;
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1) translateY(0);
+  }
+}
+.add-user {
+  height: 40vh;
+  background-color: #191919;
+}
+
+.add-people {
+  width: 25vw;
+  padding-top: 1.875rem;
+  margin: 1.25rem auto;
+  gap: 0;
+}
+.add-people__image {
+  width: 3.125rem;
+  height: 3.125rem;
+  background-image: url("../assets/avatars/Whistle.png");
+  background-size: cover;
+  border-radius: 50%;
+}
+.add-people h5 {
+  width: 10vw;
+  color: #FFF;
+}
+.add-people div {
+  position: relative;
+}
+.add-people div label:before {
+  content: " ";
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  border: 2px solid #ffffff33;
+  vertical-align: middle;
+}
+.add-people div input {
+  display: none;
+}
+.add-people div input[type=radio]:checked + label:after {
+  content: " ";
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  left: 0;
+  background-color: #31ac31;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: linear-gradient(0deg, #FFD88B, #E55851);
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+main .wrapper {
+  background-color: white;
+  width: 80vw;
+  margin: 0 auto;
+  padding-bottom: 3.125rem;
+}
+main .wrapper__fluid {
+  padding: 3.125rem 0;
+  width: 100vw;
+  padding-top: 6.25rem;
+}
+main .wrapper__fluid--dark {
+  background-color: #222;
+  padding-top: 1.875rem;
+}
+main section {
+  padding-top: 3.125rem;
+  margin: 0rem 3.125rem;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 1.25rem 0;
+}
+
+.block {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.block__color-1 {
+  width: 6.25rem;
+  height: 6.25rem;
+  margin: 1.25rem 1.25rem 0 0;
+  background-color: #fac682;
+  border: 1px solid #808080;
+}
+.block__color-2 {
+  width: 6.25rem;
+  height: 6.25rem;
+  margin: 1.25rem 1.25rem 0 0;
+  background-color: #f7a539;
+  border: 1px solid #808080;
+}
+.block__color-3 {
+  width: 6.25rem;
+  height: 6.25rem;
+  margin: 1.25rem 1.25rem 0 0;
+  background-color: #f69414;
+  border: 1px solid #808080;
+}
+.block__color-4 {
+  width: 6.25rem;
+  height: 6.25rem;
+  margin: 1.25rem 1.25rem 0 0;
+  background-color: #db8009;
+  border: 1px solid #808080;
+}
+.block__color-5 {
+  width: 6.25rem;
+  height: 6.25rem;
+  margin: 1.25rem 1.25rem 0 0;
+  background-color: #b76b07;
+  border: 1px solid #808080;
+}
+.block__color-6 {
+  width: 6.25rem;
+  height: 6.25rem;
+  margin: 1.25rem 1.25rem 0 0;
+  background-color: #ffffff;
+  border: 1px solid #808080;
+}
+.block__color-7 {
+  width: 6.25rem;
+  height: 6.25rem;
+  margin: 1.25rem 1.25rem 0 0;
+  background-color: #e6e6e6;
+  border: 1px solid #808080;
+}
+.block__color-8 {
+  width: 6.25rem;
+  height: 6.25rem;
+  margin: 1.25rem 1.25rem 0 0;
+  background-color: #b3b3b3;
+  border: 1px solid #808080;
+}
+.block__color-9 {
+  width: 6.25rem;
+  height: 6.25rem;
+  margin: 1.25rem 1.25rem 0 0;
+  background-color: #808080;
+  border: 1px solid #808080;
+}
+.block__color-10 {
+  width: 6.25rem;
+  height: 6.25rem;
+  margin: 1.25rem 1.25rem 0 0;
+  background-color: #4c4c4c;
+  border: 1px solid #808080;
+}
+.block__color-11 {
+  width: 6.25rem;
+  height: 6.25rem;
+  margin: 1.25rem 1.25rem 0 0;
+  background-color: #191919;
+  border: 1px solid #808080;
+}
+.block__color-12 {
+  width: 6.25rem;
+  height: 6.25rem;
+  margin: 1.25rem 1.25rem 0 0;
+  background-color: #821611;
+  border: 1px solid #808080;
+}
+.block__color-13 {
+  width: 6.25rem;
+  height: 6.25rem;
+  margin: 1.25rem 1.25rem 0 0;
+  background-color: #4ec475;
+  border: 1px solid #808080;
+}
+.block__color-14 {
+  width: 6.25rem;
+  height: 6.25rem;
+  margin: 1.25rem 1.25rem 0 0;
+  background-color: #E3746F;
+  border: 1px solid #808080;
+}
+.block__color-15 {
+  width: 6.25rem;
+  height: 6.25rem;
+  margin: 1.25rem 1.25rem 0 0;
+  border: 1px solid #808080;
+}
+
+/*# sourceMappingURL=main.css.map */

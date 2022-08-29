@@ -1,0 +1,38 @@
+@use '../abstracts/functions' as func;
+@use '../abstracts/variables' as vars;
+@use '../abstracts/extends';
+@use 'sass:map';
+
+.my-hosted-events__participants--container,.my-event-invitation__participants--container,.my-upcoming-event__participants--container{
+    display: flex;
+    gap: vars.$gap;
+    overflow: scroll;
+.user{
+ 
+    &__avatar{
+        @extend %flex-column-center;
+        width: 20vw;
+        max-width: func.pxtorem(96);
+       margin-right: func.pxtorem(20);
+       
+    }
+
+    &__image{
+        border-radius: 50%;
+        width: func.pxtorem(60);
+        height: func.pxtorem(60);
+        margin-bottom: func.pxtorem(10);
+        background-size: cover;
+        
+    }
+
+    &__name{
+    color: map.get($map:vars.$secondary-colors,$key: white);
+    text-align: center;
+    width: 30vw;
+    max-width: func.pxtorem(144);
+    font-size: func.pxtorem(14);
+    color: map.get($map:vars.$secondary-colors,$key: semiBlack);
+    }
+}
+}

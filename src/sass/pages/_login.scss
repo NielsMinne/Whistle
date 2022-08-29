@@ -1,0 +1,75 @@
+@use '../abstracts/functions' as func;
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mediaqueries' as media;
+@use 'sass:map';
+
+#app {
+
+    .login-container,
+    .register-container,
+    .info-container {
+        overflow: hidden;
+        height: 100vh;
+        width: 70vw;
+        max-width: func.pxtorem(336);
+        margin: 0 auto;
+
+        .app-name {
+            margin-top: func.pxtorem(20);
+            text-align: center;
+        }
+
+        h2 {
+            padding-top: func.pxtorem(50);
+        }
+
+        h4 {
+            max-width: func.pxtorem(480);
+            text-align: center;
+        }
+
+        .login-authenticate {
+            display: flex;
+            justify-content: center;
+            width: 75vw;
+            max-width: func.pxtorem(360);
+
+            &__google{
+                width: 60vw;
+                max-width: func.pxtorem(288);
+                margin-top: func.pxtorem(20);
+                display: flex;
+                justify-content: center;
+                i{
+                    padding-right: func.pxtorem(10);
+                }
+            }
+        }
+
+        .login-form,
+        .register-form,
+        .info-form {
+
+            .form {
+                margin-top: func.pxtorem(20);
+
+                div {
+                    width: 70vw;
+                    max-width: func.pxtorem(360);
+                }
+
+                button {
+                    margin-top: func.pxtorem(20);
+                    margin-bottom: func.pxtorem(10);
+                }
+
+            }
+
+        }
+    }
+}
+
+.error-message{
+    padding-top: func.pxtorem(15);
+    color: map.get($map:vars.$secondary-colors, $key: hoverRed);
+}

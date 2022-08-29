@@ -1,0 +1,74 @@
+@use '../abstracts/functions' as func;
+@use '../abstracts/variables' as vars;
+
+@use 'sass:map';
+
+.take-care-mode-container{
+    .map-container{
+        height: 50vh;
+        margin-top: func.pxtorem(20);
+    }
+    .mapboxgl-control-container{
+        display: none;
+    }
+    .mapboxgl-canvas{
+        height: 45vh !important;
+    }
+    &__title{
+        text-align: center;
+        margin-top: func.pxtorem(30);
+    }
+
+    &__whistle{
+        max-width: 240px;
+width: 50vw;
+margin-left: 25%;
+
+&--active{
+    @extend .take-care-mode-container__whistle;
+    background-color: map.get($map:vars.$secondary-colors, $key: panicRed);
+    box-shadow: 0 3px 4px hsla(0, 0%, 100%, 0.37);
+    &:hover{
+        @extend .take-care-mode-container__whistle--active;
+    }
+    }
+&:hover{
+    @extend .take-care-mode-container__whistle;
+}
+    }
+    &__chatroom{
+        max-width: 336px;
+        width:70vw;
+margin-left: 15%;
+    }
+}
+
+
+
+.marker{
+    position: relative;
+    
+    &__radius{
+        position: absolute;
+        top: -5px;
+        left: -17px;
+        background-color: blue;
+        height: 75px;
+        width: 75px;
+        border-radius: 50%;
+        opacity: 0.2;
+        z-index: -100;
+    }
+}
+.users-marker{
+    position: relative;
+    background-size: contain;
+    border-radius: 50%;
+    p{
+        position: absolute;
+        top: -20px;
+        left: -10px;
+        color: #222;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,32 @@
+@use '../abstracts/functions'as func;
+@use '../abstracts/variables'as vars;
+
+@use 'sass:map';
+
+.container-wrapper {
+    .account-container {
+        max-width: func.pxtorem(336);
+        width: 70vw;
+        margin: 0 auto;
+
+        h3 {
+            margin-top: func.pxtorem(40);
+        }
+
+        p {
+            padding-bottom: func.pxtorem(30);
+        }
+
+        .button__normal {
+            margin: 0 0 func.pxtorem(10) 0;
+        }
+
+        .account-form {
+            div {
+                max-width: func.pxtorem(336);
+                width: 70vw;
+            }
+            padding-bottom: func.pxtorem(15);
+        }
+    }
+}

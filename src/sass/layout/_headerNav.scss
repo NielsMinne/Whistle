@@ -1,0 +1,179 @@
+@use '../abstracts/functions'as func;
+@use '../abstracts/variables'as vars;
+@use '../abstracts/extends';
+
+@use 'sass:map';
+
+#app {
+
+    .container-wrapper {
+
+        max-width: func.pxtorem(480);
+        width: 100vw;
+        height: 100vh;
+
+        .header-nav-container {
+
+            border-radius: 0 0 vars.$border-radius vars.$border-radius;
+            background-color: map.get($map:vars.$secondary-colors, $key:semiBlack);
+            padding: 0 func.pxtorem(20);
+            width: 100vw;
+            max-width: func.pxtorem(480);
+        }
+
+        .header-nav {
+            @extend %flex-space-between;
+            max-width: func.pxtorem(432);
+            width: 90vw;
+            height: func.pxtorem(80);
+
+            i {
+                padding-right: func.pxtorem(15);
+            }
+
+            &__textcontainer {
+                @extend %flex-column-center;
+                width: auto;
+            }
+
+            &__subtext {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+
+            }
+
+            &__maintext {
+                margin: 0;
+                padding: 0;
+                font-weight: 600;
+            }
+
+            &__avatar {
+                background: map.get($map:vars.$secondary-colors, $key:avatarRed);
+                border-radius: 50%;
+                margin: 0;
+                padding: 0;
+                background-size: cover;
+            }
+        }
+    }
+}
+
+.overlay-left-container {
+    @extend %flex-column-center;
+    gap: vars.$gap;
+    padding-bottom: func.pxtorem(200);
+    height: 90.2vh;
+
+    background-color: #222;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 10;
+    background-image: url('../assets/other/cityscape_mobile_water.svg');
+    background-repeat: no-repeat;
+    background-position: 0 55.4vh;
+    background-size: 166%;
+
+    div {
+        h5 {
+            max-width: func.pxtorem(288);
+            width: 60vw;
+            text-align: center;
+            padding: func.pxtorem(10) 0;
+
+            &:hover {
+                background-color: map.get($map:vars.$secondary-colors, $key:grey);
+            }
+        }
+    }
+}
+
+.overlay-right-container {
+    @extend .overlay-left-container;
+    position: absolute;
+    left: 40vw;
+    width: 60vw;
+    max-width: func.pxtorem(288);
+    background-position: -40vw 55.4vh;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    ;
+
+
+    &__account {
+        margin-bottom: func.pxtorem(40);
+
+        p {
+            padding-top: func.pxtorem(10);
+        }
+    }
+
+    &__items {
+
+        margin-bottom: func.pxtorem(100);
+
+        &--remove-account {
+            color: map.get($map:vars.$secondary-colors, $key:hoverRed);
+        }
+
+        p {
+            max-width: func.pxtorem(288);
+            width: 60vw;
+            text-align: center;
+            padding: func.pxtorem(10) 0;
+
+            &:hover {
+                background-color: map.get($map:vars.$secondary-colors, $key:grey);
+            }
+        }
+    }
+
+}
+
+@keyframes openMenu {
+    0% {
+        transform: translateX(-230px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes closeMenu {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-230px);
+    }
+}
+
+@keyframes openRightMenu {
+    0% {
+        transform: translateX(230px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes closeRightMenu {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(230px);
+    }
+}

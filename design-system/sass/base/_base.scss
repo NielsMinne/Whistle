@@ -1,0 +1,20 @@
+/**
+* Base
+*/
+
+@use '../abstracts/variables' as vars;
+@use '../abstracts/functions' as func;
+@use "sass:map";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    border: none;
+    border-radius: func.pxtorem(10);
+    box-shadow: 0 3px 5px rgba(34, 34, 34, 0.3);
+}
+

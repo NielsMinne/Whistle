@@ -1,0 +1,118 @@
+@use '../abstracts/functions'as func;
+@use '../abstracts/variables'as vars;
+@use '../abstracts/extends';
+
+@use 'sass:map';
+
+
+.chat {
+    height: 90vh;
+    max-width: func.pxtorem(432);
+    width: 90vw;
+    padding-top: func.pxtorem(15);
+    margin: 0 auto;
+
+    &__field {
+        @extend %flex-column;
+        overflow: scroll;
+        overflow-x: hidden;
+        height: 80vh;
+        background-color: map.get($map:vars.$colors, $key:color7);
+        border-radius: vars.$border-radius vars.$border-radius 0 0;
+
+        hr {
+            margin-bottom: func.pxtorem(10);
+            position: sticky;
+            top: func.pxtorem(81);
+        }
+    }
+
+    &__title-container {
+        @extend %flex-align-center;
+        background-color: map.get($map:vars.$colors, $key:color7);
+        padding: func.pxtorem(15) 0;
+        max-height: 10vh;
+        min-height: 10vh;
+        max-width: func.pxtorem(432);
+        width: 90vw;
+        position: sticky;
+        top: 0;
+    }
+
+    &__avatar {
+        background-size: cover;
+        border: 2px solid map.get($map:vars.$colors, $key:color2);
+        border-radius: 50%;
+        margin: 0 func.pxtorem(10);
+    }
+
+    &__title {
+        color: #222;
+        text-align: center;
+        max-width: func.pxtorem(312);
+        width: 65vw;
+    }
+
+    &__input {
+        display: flex;
+        height: 5vh;
+        width: 100vw;
+        max-width: func.pxtorem(432);
+
+        input {
+            height: 6vh;
+            width: 75vw;
+            border-radius: 0 0 0 func.pxtorem(10);
+            padding-left: func.pxtorem(10);
+            border: none;
+        }
+
+        button {
+            box-shadow: none;
+            max-width: func.pxtorem(72);
+            width: 15vw;
+            height: 6vh;
+            border-radius: 0;
+            background-color: map.get($map:vars.$colors, $key:color2);
+            border-radius: 0 0 func.pxtorem(10) 0;
+
+            i {
+                color: map.get($map:vars.$secondary-colors, $key:white);
+            }
+        }
+    }
+
+    &__bubble {
+        margin: func.pxtorem(10);
+        padding-bottom: func.pxtorem(10);
+
+        p {
+            padding: func.pxtorem(10);
+            padding-bottom: func.pxtorem(10);
+        }
+
+        small {
+            padding: func.pxtorem(10) func.pxtorem(10) 0 func.pxtorem(10);
+        }
+
+        &--me {
+            @extend .chat__bubble;
+            background-color: map.get($map:vars.$colors, $key:color1);
+            color: map.get($map:vars.$secondary-colors, $key:white);
+            border-radius: func.pxtorem(10) func.pxtorem(10) 0 func.pxtorem(10);
+            align-self: flex-end;
+            margin-right: func.pxtorem(15);
+
+
+        }
+
+        &--other {
+            @extend .chat__bubble;
+            background-color: map.get($map:vars.$colors, $key:color2);
+            color: map.get($map:vars.$secondary-colors, $key:white);
+            border-radius: func.pxtorem(10) func.pxtorem(10) func.pxtorem(10) 0;
+            align-self: flex-start;
+            margin-left: func.pxtorem(15);
+        }
+    }
+}

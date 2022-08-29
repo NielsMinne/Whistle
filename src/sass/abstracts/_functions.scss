@@ -1,0 +1,7 @@
+/**
+* Functions
+*/
+
+@function pxtorem($px){
+    @return calc($px/16) + rem;
+  }

@@ -1,0 +1,58 @@
+/**
+* Base
+*/
+
+@use '../abstracts/variables' as vars;
+@use '../abstracts/functions' as func;
+@use '../abstracts/mixins' as mixin;
+@use '../abstracts/mediaqueries' as media;
+@use "sass:map";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    @include mixin.linearGradient2Colors(0deg,#FFD88B,#E55851);
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    border: none;
+    border-radius: func.pxtorem(10);
+    box-shadow: vars.$box-shadow;
+}
+
+span{
+    color: map.get($map:vars.$colors,$key:color12)
+}
+div{
+    margin: 0 ;
+}
+
+#app{
+    max-width: func.pxtorem(480);
+}
+#image-background,#image-background2{
+    height: 100vh;
+    width: 100vw ;
+    position: absolute;
+    left:0;
+    z-index: -1;
+    background-image: url('../assets/other/cityscape_mobile_water.svg');
+    background-repeat: no-repeat;
+    background-position: 0 65vh;
+    overflow-y: hidden;
+}
+
+#image-background2{
+    opacity: 0.6;
+    background-position: 0 65vh;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
